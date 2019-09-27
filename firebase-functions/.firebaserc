@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "socionet-1",
+    "socionet": "socionet-1"
+  }
+}

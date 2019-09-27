@@ -1,0 +1,44 @@
+{
+  "name": "socionet-client",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/codemod": "^4.3.0",
+    "@material-ui/core": "^4.4.2",
+    "@material-ui/icons": "^4.4.1",
+    "@material-ui/lab": "^4.0.0-alpha.27",
+    "@material-ui/styles": "^4.4.1",
+    "axios": "^0.18.0",
+    "clsx": "^1.0.4",
+    "dayjs": "^1.8.11",
+    "jwt-decode": "^2.2.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-redux": "^7.1.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "2.1.8",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "https://us-central1-socionet-1.cloudfunctions.net/api",
+  "devDependencies": {
+    "babel-plugin-import": "^1.12.1",
+    "customize-cra": "^0.6.1",
+    "react-app-rewired": "^2.1.3"
+  }
+}
