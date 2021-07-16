@@ -2,23 +2,20 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import jwtDecode from "jwt-decode";
 import axios from "axios";
-// Redux
-import { Provider } from "react-redux";
-import store from "./redux/store";
-import { SET_AUTHENTICATED } from "./redux/types";
-import { logoutUser, getUserData } from "./redux/actions/userActions";
-
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
 import { CssBaseline } from "@material-ui/core";
-// Pages
+import { Provider } from "react-redux";
+
+import store from "./redux/store";
+import { SET_AUTHENTICATED } from "./redux/types";
+import { logoutUser, getUserData } from "./redux/actions/userActions";
+import AuthRoute from "./util/AuthRoute";
 import HomePage from "./pages/Home";
 import LoginPage from "./pages/Login";
 import SignupPage from "./pages/Signup";
 import UserPage from "./pages/User";
-
 import Navbar from "./components/layout/Navbar";
-import AuthRoute from "./util/AuthRoute";
 import { muiStyles, customStyles } from "./util/theme";
 import "./App.css";
 
@@ -28,6 +25,7 @@ axios.defaults.baseURL =
 axios.defaults.timeout = 100000;
 
 const theme = createMuiTheme({ ...muiStyles, custom: customStyles });
+
 // check authentication state
 const token = localStorage.FBIdToken;
 if (token) {
